@@ -12,7 +12,4 @@ object S99_P06 {
     pLeft.equals(pRight)
   }
 
-  def main(args: Array[String]) {
-    println("jarek")
-  }
 }
