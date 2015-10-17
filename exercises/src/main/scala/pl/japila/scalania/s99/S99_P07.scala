@@ -1,7 +1,7 @@
 package pl.japila.scalania.s99
 
 object S99_P07 {
-  def flatten(ls: Seq[Any]): Seq[Any] = ???
+  def flatten(ls: Seq[Any]): Seq[Any] = flattenAcc(ls, Nil).reverse
 
   def flattenAcc(ls: Seq[Any], acc: Seq[Any]) : Seq[Any] = {
     if (ls.isEmpty) {
