@@ -11,15 +11,13 @@ object S99_P09 {
       result.reverse
     }
     else {
-      if (currentSeq.isEmpty) {
+      if (currentSeq.isEmpty)
         packAcc(ts.tail, Seq(ts.head), acc)
-      }
       else {
-        if (currentSeq.head == ts.head) {
+        if (currentSeq.head == ts.head)
           packAcc(ts.tail, ts.head +: currentSeq, acc)
-        } else {
+         else
           packAcc(ts, Nil, currentSeq +: acc)
-        }
       }
     }
 
