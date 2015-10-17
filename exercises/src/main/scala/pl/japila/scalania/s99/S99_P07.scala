@@ -15,8 +15,4 @@ object S99_P07 {
     }
   }
 
-
-  def main(args: Array[String]) {
-
-  }
 }
