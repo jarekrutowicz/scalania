@@ -6,18 +6,14 @@ object S99_P10 {
     if (ts.isEmpty)
       Nil
     else
-      encodeAcc(ts.tail, (1, ts.head), Nil)
+      encodeAcc(ts.tail, (1, ts.head), Nil).reverse
 
-  def encodeAcc[T](ts: Seq[T], current: (Int, T), acc: Seq[(Int, T)]): Seq[(Int, T)] = {
-    val reversedResult =
-      if (ts.isEmpty)
-        current+:acc
-      else if (ts.head == current._2)
-        encodeAcc(ts.tail, (current._1+1, current._2), acc)
-      else
-        encodeAcc(ts.tail, (1, ts.head), current+:acc)
-
-    reversedResult.reverse
-  }
+  def encodeAcc[T](ts: Seq[T], current: (Int, T), acc: Seq[(Int, T)]): Seq[(Int, T)] =
+    if (ts.isEmpty)
+      current +: acc
+    else if (ts.head == current._2)
+      encodeAcc(ts.tail, (current._1 + 1, current._2), acc)
+    else
+      encodeAcc(ts.tail, (1, ts.head), current +: acc)
 
 }
