@@ -14,8 +14,4 @@ object S99_P18 {
     sliceAcc(1, ts , Nil)
   }
 
-  def main(args: Array[String]) {
-    val actual = slice(3, 7, List('a, 'b, 'c, 'd, 'e, 'f, 'g, 'h, 'i, 'j, 'k))
-    println(actual)
-  }
 }
